@@ -1,0 +1,208 @@
+<style>
+@page {
+    size: A4;
+    margin: 6mm;   /* smaller margin */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 9.2px;   /* slightly reduced */
+}
+
+h2 {
+    text-align: center;
+    margin: 0;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 8.5px;
+    margin-bottom: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid black;
+    padding: 2px;   /* reduced padding */
+    vertical-align: top;
+    line-height: 1.2;   /* compress row height */
+}
+
+.declaration {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 9px;
+}
+
+.footer-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.footer-table td {
+    border: none;
+    padding: 2px;
+}
+
+.note {
+    font-size: 8px;
+    margin-top: 4px;
+}
+</style>
+</head>
+
+<body>
+
+<h2>PRIOR INTIMATION</h2>
+
+<div class="subtitle">
+Particulars to be furnished by TSNPDCL employee while giving prior intimation or seeking prior sanction, under Regulation 5 of Andhra Pradesh State Electricity Board (Revised) Conduct Regulations.
+</div>
+</div>
+
+<table>
+
+<tr>
+<td width="50%">1. Name and Designation</td>
+<td>{{ name_designation }}</td>
+</tr>
+
+<tr>
+<td>2. Scale of pay and present pay</td>
+<td>{{ scale_pay }}</td>
+</tr>
+
+<tr>
+<td>3. Purpose of application / sanction for transaction</td>
+<td>{{ purpose }}</td>
+</tr>
+
+<tr>
+<td>4. Whether property is being acquired or disposed of</td>
+<td>{{ property_type }}</td>
+</tr>
+
+<tr>
+<td>5. Probable date of acquisition / Disposal</td>
+<td>{{ probable_date }}</td>
+</tr>
+
+<tr>
+<td>6. Mode of acquisition / Disposal</td>
+<td>{{ mode }}</td>
+</tr>
+
+<tr>
+<td>7(a). Full details about location viz Municipal No., Street/Village/Mandal, District and State in which situated</td>
+<td>{{ location_7a }}</td>
+</tr>
+
+<tr>
+<td>7(b). Description of the property, in the case of Cultivable land, dry or irrigated land</td>
+<td>{{ description_7b }}</td>
+</tr>
+
+<tr>
+<td>7(c). Whether free hold / or lease hold</td>
+<td>{{ hold_type_7c }}</td>
+</tr>
+
+<tr>
+<td>7(d). Whether the applicant's interest in the property is in full or part (in case of partial interest, the extent of such interest must be indicated)</td>
+<td>{{ interest_7d }}</td>
+</tr>
+
+<tr>
+<td>7(e). In case the transaction is not exclusively in the name of the TSNPDCL employee, particulars of ownership and share of each member</td>
+<td>{{ ownership_7e }}</td>
+</tr>
+
+<tr>
+<td>8. Price of property</td>
+<td>{{ price }}</td>
+</tr>
+
+<tr>
+<td>9. In the case of acquisition, source or sources from which financed / proposed to be financed</td>
+<td>{{ finance_source_main }}</td>
+</tr>
+
+<tr>
+<td>9(a). Personal savings</td>
+<td>{{ personal_savings_9a }}</td>
+</tr>
+
+<tr>
+<td>9(b). Other sources giving details</td>
+<td>{{ other_sources_9b }}</td>
+</tr>
+
+<tr>
+<td>10. In the case of disposal of property, was requisite sanction obtained given for its acquisition. A copy of the sanction / acknowledgment be attached</td>
+<td>{{ sanction_details }}</td>
+</tr>
+
+<tr>
+<td>11(a). Name and address of the party with whom transaction is proposed to be made</td>
+<td>{{ party_name_11a }}</td>
+</tr>
+
+<tr>
+<td>11(b). Is the party related to the applicant? If so, state the relationship</td>
+<td>{{ party_relation_11b }}</td>
+</tr>
+
+<tr>
+<td>11(c).Did the applicant have any dealings with party in his official capacity at any time, or is the applicant likely to have any dealings with him in the near future?</td>
+<td>{{ official_dealings_11c }}</td>
+</tr>
+
+<tr>
+<td>11(d). How was the transaction arranged? (whether through any statutory body or a private agency through advertisement or through friends and relatives, Full particulars to be given)</td>
+<td>{{ transaction_mode_11d }}</td>
+</tr>
+
+<tr>
+<td>12. Any other relevant fact which the applicant may like to mention</td>
+<td>{{ additional_facts }}</td>
+</tr>
+
+</table>
+
+<div class="declaration" style="margin-top:18px; margin-bottom:6px;">
+<b>DECLARATION</b><br>
+<div style="margin-top:8px;"></div>
+<div>
+I hereby declare that the particulars given above are true and correct to the best of my knowledge and belief. I request that I may be given permission to acquire / dispose of the property as described above.
+</div>
+<div style="margin-top:25px;margin-bottom:15px">
+
+    <div>
+        <b>Station :</b> {{ station }}
+    </div>
+
+    <div style="display:flex; justify-content:space-between; margin-top:10px;">
+
+        <div>
+            <b>Date :</b> {{ submission_date }}
+        </div>
+
+        <div style="text-align:right; padding-right:1mm;">
+            <b>Signature of Applicant</b><br>{{ name_designation }}
+        </div>
+
+    </div>
+
+</div>
+<div class="note">
+<b>Note:</b><br>
+1. Different portions may be used according to requirement.<br>
+2. Application should be submitted at least 30 days before proposed transaction.
+</div>
+
+</body>
+</html>
